@@ -1,0 +1,24 @@
+version: '3.4'
+
+services:
+  store:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - InventoryApi=http://store.inventoryapi
+      - ProductsApi=http://store.productapi
+    ports:
+      - "80"
+
+  store.inventoryapi:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"
+
+
+  store.productapi:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"
+
